@@ -7,5 +7,4 @@
 ![image alt](https://github.com/ZakiullahAfzal/2D-Game_Box/blob/c2a060563c1cef2fda09f1edbbfd1542550f3664/Image/MathQView.png)
 ![image alt](https://github.com/ZakiullahAfzal/2D-Game_Box/blob/c2a060563c1cef2fda09f1edbbfd1542550f3664/Image/MissingNView.png)
 ![image alt](	https://github.com/ZakiullahAfzal/2D-Game_Box/blob/c2a060563c1cef2fda09f1edbbfd1542550f3664/Image/Screenshot%202026-11-07%20160937.png)
-![image alt](https://github.com/ZakiullahAfzal/2D-Game_Box/blob/9320d1e96814da45488549a5aca6fc2af27c2134/Image/Screenshot%202026-11-07%20160937.png)
 ![image alt](https://github.com/ZakiullahAfzal/2D-Game_Box/blob/c2a060563c1cef2fda09f1edbbfd1542550f3664/Image/SpaceView.png)
