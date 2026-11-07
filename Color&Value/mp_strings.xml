@@ -1,0 +1,16 @@
+<resources>
+    <string name="mp_title">Missing Number</string>
+    <string name="mp_find">Find the missing number</string>
+    <string name="mp_answer">Your answer</string>
+    <string name="mp_back">Back</string>
+    <string name="mp_hint">Hint</string>
+    <string name="mp_clear">Clear answer</string>
+    <string name="mp_delete">Delete last digit</string>
+    <string name="mp_enter">Enter</string>
+    <string name="mp_level">%1$d / 50</string>
+    <string name="mp_correct">Correct!</string>
+    <string name="mp_wrong">Try again</string>
+    <string name="mp_empty">Enter your answer</string>
+    <string name="mp_hint_example">Each number is double the previous one.</string>
+    <string name="mp_placeholder">?</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+ <string name="mq_title">Math Quiz</string>
+ <string name="mq_back">Back</string>
+ <string name="mq_difficulty">Difficulty</string>
+ <string name="mq_easy">Easy</string>
+ <string name="mq_medium">Medium</string>
+ <string name="mq_hard">Hard</string>
+ <string name="mq_play">Play</string>
+ <string name="mq_art_description">Green mascot beside a Math Quiz board</string>
+</resources>

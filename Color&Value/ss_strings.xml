@@ -1,0 +1,19 @@
+<resources>
+    <string name="ss_title">Space Shooter</string>
+    <string name="ss_subtitle">Choose your spaceship</string>
+    <string name="ss_back">Back</string>
+    <string name="ss_coins">Coins</string>
+    <string name="ss_buy">BUY %1$d </string>
+    <string name="ss_price">%1$d AF</string>
+    <string name="ss_locked">LOCKED</string>
+    <string name="ss_owned">OWNED</string>
+    <string name="ss_play">Play</string>
+    <string name="ss_unlock">Unlock to play</string>
+    <string name="ss_ready">Ready to play</string>
+    <string name="ss_previous">Previous spaceship</string>
+    <string name="ss_next">Next spaceship</string>
+    <string name="ss_ship_description">Spaceship preview</string>
+    <string name="ss_insufficient">Not enough coins</string>
+    <string name="ss_dots">%1$d / %2$d</string>
+    <string name="ss_balance">%1$d</string>
+</resources>

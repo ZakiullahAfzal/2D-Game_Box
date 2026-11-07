@@ -1,0 +1,10 @@
+<resources>
+ <string name="ttt_title">Tic Tac Toe</string>
+ <string name="ttt_back">Back</string>
+ <string name="ttt_difficulty">Difficulty</string>
+ <string name="ttt_easy">Easy</string>
+ <string name="ttt_medium">Medium</string>
+ <string name="ttt_hard">Hard</string>
+ <string name="ttt_play">Play</string>
+ <string name="ttt_art_description">Green mascot beside a Tic Tac Toe board</string>
+</resources>
