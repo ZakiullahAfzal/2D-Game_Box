@@ -1,0 +1,2322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mn_background"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <!-- Main View -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001">
+
+        <android.widget.Button
+            android:id="@+id/backButton"
+            android:layout_width="88dp"
+            android:layout_height="48dp"
+            android:background="@drawable/mn_back"
+            android:backgroundTint="@null"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:stateListAnimator="@null"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Missing Number"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Choose a level"
+            android:textColor="#A8ECF5"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewLevels"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="176dp">
+
+                <LinearLayout
+                    android:id="@+id/level1"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_open"
+                    android:clickable="true"
+                    android:contentDescription="Level 1"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_play" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level2"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 2"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level3"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 3"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level4"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 4"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <LinearLayout
+                    android:id="@+id/level5"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 5"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock5"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level6"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 6"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock6"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level7"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 7"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="7"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock7"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level8"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 8"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="8"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock8"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level9"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 9"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock9"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level10"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 10"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock10"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level11"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 11"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="11"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock11"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level12"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 12"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="12"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock12"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level13"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 13"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="13"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock13"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level14"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 14"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="14"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock14"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level15"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 15"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="15"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock15"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level16"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 16"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="16"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock16"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level17"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 17"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="17"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock17"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level18"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 18"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="18"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock18"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level19"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 19"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="19"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock19"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level20"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 20"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock20"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level21"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 21"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="21"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock21"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level22"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 22"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="22"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock22"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level23"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 23"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="23"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock23"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level24"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 24"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="24"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock24"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level25"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 25"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="25"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock25"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level26"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 26"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="26"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock26"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level27"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 27"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="27"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock27"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level28"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 28"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="28"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock28"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level29"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 29"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="29"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock29"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level30"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 30"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="30"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock30"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level31"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 31"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="31"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock31"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level32"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 32"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="32"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock32"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level33"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 33"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="33"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock33"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level34"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 34"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="34"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock34"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level35"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 35"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="35"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock35"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level36"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 36"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="36"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock36"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level37"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 37"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="37"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock37"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level38"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 38"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="38"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock38"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level39"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 39"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="39"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock39"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level40"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 40"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="40"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock40"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level41"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 41"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="41"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock41"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level42"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 42"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="42"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock42"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level43"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 43"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="43"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock43"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level44"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 44"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="44"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock44"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level45"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 45"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="45"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock45"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level46"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 46"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="46"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock46"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level47"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 47"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="47"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock47"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level48"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 48"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text48"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="48"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock48"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/level49"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 49"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text49"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="49"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock49"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/level50"
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mn_locked"
+                    android:clickable="true"
+                    android:contentDescription="Level 50"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="#BDCAE4"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/mn_lock50"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="6dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mn_lock" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="96dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ========================================= -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPlayGround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearBackHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <android.widget.Button
+                android:id="@+id/mpBack"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:background="@drawable/mp_purple"
+                android:backgroundTint="@null"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:minWidth="0dp"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/mp_back"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/mpLevel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1 / 50"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <android.widget.Button
+                android:id="@+id/mpHint"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:background="@drawable/mp_gold"
+                android:backgroundTint="@null"
+                android:fontFamily="sans-serif-medium"
+                android:includeFontPadding="false"
+                android:minWidth="0dp"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:stateListAnimator="@null"
+                android:text="@string/mp_hint"
+                android:textAllCaps="false"
+                android:textColor="#FFEF8B" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+
+            android:orientation="vertical"
+            android:padding="14dp">
+
+
+            <TextView
+                android:id="@+id/mpPrompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:text="@string/mp_find"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/qustion"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/missingnumber1" />
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/mpAnswerLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/mp_answer"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mpAnswer"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:accessibilityLiveRegion="polite"
+            android:background="@drawable/mp_answer"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:id="@+id/linearButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/mp_panel"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/mpClear"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_purple"
+                    android:backgroundTint="@null"
+                    android:contentDescription="@string/mp_clear"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="C"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_purple"
+                    android:backgroundTint="@null"
+                    android:contentDescription="@string/mp_delete"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="⌫"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpEnter"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/mp_cyan"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="@string/mp_enter"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit1"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="1"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit2"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit3"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="3"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit4"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="4"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit5"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="5"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit6"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="6"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit7"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="7"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit8"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="8"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit9"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="9"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/mpDigit0"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mp_key"
+                    android:backgroundTint="@null"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:minWidth="0dp"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:stateListAnimator="@null"
+                    android:text="0"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mn_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutPlayGround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.widget.Button
+            android:id="@+id/mpBackHelp"
+            android:layout_width="88dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/mp_purple"
+            android:backgroundTint="@null"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:visibility="invisible"
+            android:minWidth="0dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:stateListAnimator="@null"
+            android:text="@string/mp_back"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/textViewAnswer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewPruchesCoin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.412"
+            app:srcCompat="@drawable/score" />
+
+        <TextView
+            android:id="@+id/textViewPruches"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:text="@string/_50"
+            android:textColor="#D18717"
+            android:textSize="25dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.441"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.409"
+            tools:layout_editor_absoluteY="258dp" />
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_solution"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.56" />
+
+        <TextView
+            android:id="@+id/textViewAnswer"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/_2_2"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.223" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageViewNextLevel"
+            android:layout_width="153dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="168dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/checkmark" />
+
+        <TextView
+            android:id="@+id/textViewNextLevel"
+            android:layout_width="208dp"
+            android:layout_height="66dp"
+            android:background="#262323"
+            android:gravity="center"
+            android:text="@string/next_level"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewNextLevel"
+            app:layout_constraintVertical_bias="0.13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

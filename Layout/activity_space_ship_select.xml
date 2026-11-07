@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ssRoot"
+    android:background="@drawable/ss_stars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceShipSelectActivity">
+
+    <android.widget.Button
+        android:id="@+id/ssBack"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ss_purple"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ssCoinIcon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Coins"
+        android:src="@drawable/ss_coin"
+        app:layout_constraintBottom_toBottomOf="@id/ssBack"
+        app:layout_constraintEnd_toStartOf="@id/ssBalance"
+        app:layout_constraintTop_toTopOf="@id/ssBack" />
+
+    <TextView
+        android:id="@+id/ssBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="20003"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ssTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="SPACE SHOOTER"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ssBack" />
+
+    <TextView
+        android:id="@+id/ssSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Choose your spaceship"
+        android:textColor="#B9D5F5"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ssTitle" />
+
+    <HorizontalScrollView
+        android:id="@+id/ssCarousel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="12dp"
+        android:clipToPadding="false"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/ssSwipeHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ssSubtitle">
+
+        <LinearLayout
+            android:id="@+id/ssCards"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shipCard1"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ss_card_selected"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/shipImage1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="default"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/player"
+                    app:layout_constraintBottom_toTopOf="@id/shipPrice1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shipPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="Achieve"
+                    android:textColor="#4CAF50"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shipCard2"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ss_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/shipImage2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="star_breaker"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/start_breaker"
+                    app:layout_constraintBottom_toTopOf="@id/shipPrice2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shipPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="1800"
+                    android:textColor="#FFDA45"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="LOCKED"
+                    android:textColor="#FF718D"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shipCard3"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ss_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/shipImage3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="star_war"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/star_war"
+                    app:layout_constraintBottom_toTopOf="@id/shipPrice3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shipPrice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="2200"
+                    android:textColor="#FFDA45"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="LOCKED"
+                    android:textColor="#F86233"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shipCard4"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ss_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/shipImage4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="Star_war"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/star_ship"
+                    app:layout_constraintBottom_toTopOf="@id/shipPrice4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shipPrice4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="4300"
+                    android:textColor="#FFDA45"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="LOCKED"
+                    android:textColor="#F86233"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/shipCard5"
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/ss_card"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/shipImage5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="star_galaxy"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/start_galaxy"
+                    app:layout_constraintBottom_toTopOf="@id/shipPrice5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shipPrice5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="6000"
+                    android:textColor="#FFDA45"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="LOCKED"
+                    android:textColor="#F86233"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/ssSwipeHint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="‹   Swipe to explore   ›"
+        android:textColor="#53DBF7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/ssBuy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/ssBuy"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/ss_gold"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null"
+        android:text="BUY 1800 AF"
+        android:textAllCaps="false"
+        android:textColor="#452508"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ssPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/ssPlay"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/ss_play_background"
+        android:backgroundTint="@null"
+        android:enabled="false"
+        android:stateListAnimator="@null"
+        android:text="Play"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ssHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ssHint"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="Unlock to play"
+        android:textColor="#B5C1DA"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mq_background"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr"
+    android:paddingStart="24dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="24dp"
+    tools:context=".MathQuiz">
+
+    <android.widget.Button
+        android:id="@+id/mqBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/mq_purple"
+        android:backgroundTint="@null"
+        android:drawableStart="@drawable/mq_arrow"
+        android:drawablePadding="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:singleLine="true"
+        android:stateListAnimator="@null"
+        android:text="@string/mq_back"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/mqTitle"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/math_quiz_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mqBackButton" />
+
+    <ImageView
+        android:id="@+id/mqHero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/mq_art_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mq_hero"
+        app:layout_constraintBottom_toTopOf="@id/mqPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="220dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mqTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mqPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mq_panel"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/mqDifficultyLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/mq_difficulty"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/mqDifficultyGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:checkedButton="@id/mqDifficultyEasy"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mqDifficultyLabel">
+
+            <android.widget.RadioButton
+                android:id="@+id/mqDifficultyEasy"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/mq_difficulty"
+                android:backgroundTint="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="48dp"
+                android:padding="4dp"
+                android:text="@string/mq_easy"
+                android:textColor="@color/mq_option_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.widget.RadioButton
+                android:id="@+id/mqDifficultyMedium"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/mq_difficulty"
+                android:backgroundTint="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="48dp"
+                android:padding="4dp"
+                android:text="@string/mq_medium"
+                android:textColor="@color/mq_option_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.widget.RadioButton
+                android:id="@+id/mqDifficultyHard"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/mq_difficulty"
+                android:backgroundTint="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="48dp"
+                android:padding="4dp"
+                android:text="@string/mq_hard"
+                android:textColor="@color/mq_option_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <android.widget.RadioButton
+                android:id="@+id/mqBot"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/mq_difficulty"
+                android:backgroundTint="@null"
+                android:button="@null"
+                android:gravity="center"
+                android:minWidth="0dp"
+                android:minHeight="48dp"
+                android:padding="4dp"
+                android:text="@string/bot"
+                android:textColor="@color/mq_option_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+        <android.widget.Button
+            android:id="@+id/mqPlayButton"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/mq_purple"
+            android:backgroundTint="@null"
+            android:drawableStart="@drawable/mq_play_icon"
+            android:drawablePadding="12dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:singleLine="true"
+            android:stateListAnimator="@null"
+            android:text="@string/mq_play"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mqDifficultyGroup" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewDeficulty"
+        android:layout_width="177dp"
+        android:layout_height="162dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mqHero"
+        app:layout_constraintEnd_toEndOf="@+id/mqHero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/mqHero"
+        app:layout_constraintTop_toTopOf="@+id/mqHero"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/easy" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Existing Problem Display Layout -->
+        <LinearLayout
+            android:id="@+id/linearLayoutUp"
+            android:layout_width="364dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="88dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewUp1"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/buttonup"
+                android:gravity="center"
+                android:rotation="180"
+                android:text="@string/_123"
+                android:textColor="#03A9F4"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewUp2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/buttonup"
+                android:gravity="center"
+                android:rotation="180"
+                android:text="123"
+                android:textColor="#03A9F4"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewUp3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/buttonup"
+                android:gravity="center"
+                android:rotation="180"
+                android:text="123"
+                android:textColor="#03A9F4"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/dividerUp"
+            android:layout_width="330dp"
+            android:layout_height="10dp"
+            android:background="#B703A9F4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutUp"
+            app:layout_constraintVertical_bias="0.08" />
+
+        <TextView
+            android:id="@+id/textViewUp"
+            android:layout_width="284dp"
+            android:layout_height="98dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:rotation="180"
+            android:text="@string/_123_123"
+            android:textColor="#D7CACA"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerUp" />
+
+        <TextView
+            android:id="@+id/textViewDown"
+            android:layout_width="284dp"
+            android:layout_height="98dp"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:text="@string/_123_123"
+            android:textColor="#D7CACA"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUp" />
+
+        <View
+            android:id="@+id/dividerDown"
+            android:layout_width="330dp"
+            android:layout_height="10dp"
+            android:background="#F15F54"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDown"
+            app:layout_constraintVertical_bias="0.266" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDown"
+            android:layout_width="364dp"
+            android:layout_height="59dp"
+            android:layout_marginBottom="80dp"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerDown"
+            app:layout_constraintVertical_bias="0.373">
+
+            <TextView
+                android:id="@+id/textViewDown1"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttondown"
+                android:gravity="center"
+                android:text="123"
+                android:textColor="#C67878"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDown2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttondown"
+                android:gravity="center"
+                android:text="123"
+                android:textColor="#C67878"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDown3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/buttondown"
+                android:gravity="center"
+                android:text="123"
+                android:textColor="#C67878"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Exit Button -->
+        <TextView
+            android:id="@+id/textViewExit"
+            android:layout_width="39dp"
+            android:layout_height="74dp"
+            android:gravity="center"
+            android:rotation="90"
+            android:text="@string/exit"
+            android:textColor="#D7CACA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.002"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.479" />
+
+        <!-- Feedback Message -->
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSCoreCount"
+            android:layout_width="60dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.499">
+
+            <TextView
+                android:id="@+id/textViewScore1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|right"
+                android:rotation="90"
+                android:text="@string/zero"
+                android:textColor="#8DC8E2"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewScoreDivider"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:rotation="90"
+                android:text="@string/divider"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewScore2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center|left"
+                android:rotation="90"
+                android:text="0"
+                android:textColor="#E67E7E"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewCounter"
+            android:layout_width="126dp"
+            android:layout_height="109dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
